@@ -1,0 +1,45 @@
+.home-main {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    height: 82vh;
+
+    background-image: url('../assets/imgs/Cover.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .home-section {
+        grid-column: 2/3;
+        justify-self: center;
+        align-self: center;
+
+
+        display: grid;
+        height: 60%;
+        grid-template-rows: 1fr 1fr;
+
+        .home-section_paragrap {
+            justify-self: center;
+            align-self: flex-start;
+
+            .home-section_paragrap-text {
+                font-size: 3rem;
+                color: white;
+                letter-spacing: 1rem;
+                text-align: center;
+                font-family: 'roboto', monospace;
+            }
+        }
+
+        .home-section_button {
+            justify-self: center;
+            align-self: flex-end;
+
+            width: 100px;
+            height: 50px;
+
+            background-color: aquamarine;
+        }
+    }
+
+}

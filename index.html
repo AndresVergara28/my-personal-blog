@@ -4,25 +4,55 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mi Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css"
+    />
+    <link rel="stylesheet" href="./css/uicons-brands/css/uicons-brands.css" />
   </head>
   <body>
     <header>
-      <section>
-        <div>
-          <a href="#">Instagram </a>
-          <a href="#">Twiter</a>
-          <a href="#">LinkeIn</a>
-          <a href="#">Youtube</a>
+      <section class="header-icons-container">
+        <div class="icons">
+          <a href=""> <span class="fi fi-brands-instagram"></span></a>
+          <a href=""> <span class="fi fi-brands-facebook"></span></a>
+          <a href=""> <span class="fi fi-brands-twitter-alt-square"></span></a>
+          <a href=""> <span class="fi fi-brands-youtube"></span></a>
         </div>
       </section>
-      <nav>
-        <section>
-          <a href="#">logo</a>
+      <nav class="header-nav-container">
+        <section class="nav-logo-container">
+          <a href="./index.html"
+            ><img src="./assets/imgs/Logo-negro.png" alt="Logo MyBlog"
+          /></a>
         </section>
-        <section><a href="./pages/perfil.html">Sobre mi</a></section>
+        <section class="nav-profile-link">
+          <a href="#">Sobre mi</a>
+        </section>
       </nav>
     </header>
-    <main></main>
+    <main class="home-main">
+      <section class="home-section">
+        <div class="home-section_paragrap">
+          <p class="home-section_paragrap-text roboto-bold">
+            Conoce las novedades y noticias del Mundo Tech
+          </p>
+        </div>
+        <button class="home-section_button button-principal">
+          <a href="./pages/blogs.html" class="roboto-bold">Entra ya!</a>
+        </button>
+      </section>
+    </main>
   </body>
 </html>

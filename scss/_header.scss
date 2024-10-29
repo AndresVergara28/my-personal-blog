@@ -1,0 +1,61 @@
+header {
+    width: 100%;
+    height: 18vh;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+
+    .header-icons-container {
+        width: 100%;
+        background-color: #47cfac;
+
+        .icons {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            a {
+                padding: 1rem;
+
+                span {
+                    color: white;
+                    font-size: 24px;
+                }
+
+
+            }
+
+        }
+
+    }
+
+    .header-nav-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+
+        .nav-logo-container {
+
+            a {
+                img {
+                    width: 22rem;
+                }
+            }
+        }
+
+        .nav-profile-link {
+            padding-right: 2rem;
+            justify-self: flex-end;
+
+            a {
+                font-size: 1.6rem;
+                color: black;
+                text-decoration: underline;
+                font-weight: bolder;
+            }
+        }
+
+    }
+
+}

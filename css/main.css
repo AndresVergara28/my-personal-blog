@@ -1,0 +1,217 @@
+.roboto-thin {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.roboto-thin-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.roboto-light-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.roboto-regular-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.roboto-medium-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.roboto-bold-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.roboto-black-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  display: inline;
+  text-decoration: none;
+  color: black;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.button-principal {
+  padding: 0.5rem 1rem;
+  border: 1px solid white;
+}
+
+body {
+  font-family: "Roboto", monospace;
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  width: 100%;
+  height: 18vh;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+}
+header .header-icons-container {
+  width: 100%;
+  background-color: #47cfac;
+}
+header .header-icons-container .icons {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+header .header-icons-container .icons a {
+  padding: 1rem;
+}
+header .header-icons-container .icons a span {
+  color: white;
+  font-size: 24px;
+}
+header .header-nav-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+header .header-nav-container .nav-logo-container a img {
+  width: 22rem;
+}
+header .header-nav-container .nav-profile-link {
+  padding-right: 2rem;
+  justify-self: flex-end;
+}
+header .header-nav-container .nav-profile-link a {
+  font-size: 1.6rem;
+  color: black;
+  text-decoration: underline;
+  font-weight: bolder;
+}
+
+.home-main {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  height: 82vh;
+  background-image: url("../assets/imgs/Cover.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.home-main .home-section {
+  grid-column: 2/3;
+  justify-self: center;
+  align-self: center;
+  display: grid;
+  height: 60%;
+  grid-template-rows: 1fr 1fr;
+}
+.home-main .home-section .home-section_paragrap {
+  justify-self: center;
+  align-self: flex-start;
+}
+.home-main .home-section .home-section_paragrap .home-section_paragrap-text {
+  font-size: 3rem;
+  color: white;
+  letter-spacing: 1rem;
+  text-align: center;
+  font-family: "roboto", monospace;
+}
+.home-main .home-section .home-section_button {
+  justify-self: center;
+  align-self: flex-end;
+  width: 100px;
+  height: 50px;
+  background-color: aquamarine;
+}
+
+.news {
+  height: 62vh;
+  padding: 0rem 10rem 4rem 10rem;
+  background-color: gray;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 200px;
+  grid-template-areas: "titulo titulo" "image description" "image description";
+}
+.news .news_title {
+  padding: 2rem 0;
+  grid-area: titulo;
+  font-size: 2.4rem;
+}
+.news .news_image {
+  width: 500px;
+  height: 300px;
+  grid-area: image;
+  background: url("../assets/imgs/main-news-img.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.news .news_description {
+  grid-area: description;
+  padding: 2rem 4rem;
+}
+.news .news_description .description_title {
+  font-size: 3.2rem;
+  padding-bottom: 2rem;
+}
+
+/*# sourceMappingURL=main.css.map */
