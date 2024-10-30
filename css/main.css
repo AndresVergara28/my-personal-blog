@@ -182,8 +182,8 @@ header .header-nav-container .nav-profile-link a {
   background-color: aquamarine;
 }
 
-.news {
-  height: 62vh;
+.news-section {
+  min-height: 62vh;
   padding: 0rem 10rem 4rem 10rem;
   background-color: gray;
   display: grid;
@@ -191,27 +191,86 @@ header .header-nav-container .nav-profile-link a {
   grid-template-rows: auto 200px;
   grid-template-areas: "titulo titulo" "image description" "image description";
 }
-.news .news_title {
-  padding: 2rem 0;
+.news-section .news_title {
   grid-area: titulo;
+  font-family: "roboto-slab", monospace;
   font-size: 2.4rem;
+  align-self: center;
 }
-.news .news_image {
-  width: 500px;
-  height: 300px;
+.news-section .news_image {
   grid-area: image;
+  width: 90%;
+  min-height: 300px;
   background: url("../assets/imgs/main-news-img.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.news .news_description {
+.news-section .news_description {
   grid-area: description;
   padding: 2rem 4rem;
 }
-.news .news_description .description_title {
+.news-section .news_description .description_title {
+  font-family: "roboto-slab", monospace;
   font-size: 3.2rem;
   padding-bottom: 2rem;
+}
+.news-section .news_description .description_paragraph {
+  font-family: "roboto-slab", monospace;
+  font-size: 1.4rem;
+  padding-bottom: 2rem;
+}
+
+.blogs-section {
+  padding: 1rem 10rem;
+}
+.blogs-section .blogs_title {
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 1.8rem;
+  font-weight: bolder;
+  font-family: "roboto-slab", monospace;
+}
+.blogs-section .blogs_container {
+  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+.card {
+  padding: 1rem;
+}
+.card .card_image img {
+  width: 100%;
+}
+.card .card_title {
+  padding: 1rem 0;
+  font-size: 1.4rem;
+  font-family: "roboto-slab", monospace;
+}
+.card .card_sinapsis {
+  padding: 1rem 0;
+  font-size: 1.4rem;
+  font-family: "roboto-slab", monospace;
+  font-weight: 700;
+}
+.card .card_button {
+  font-family: "roboto-slab", monospace;
+  padding: 1rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  border: 1px solid aquamarine;
+}
+.card .card_button:hover {
+  background-color: aquamarine;
+  color: white;
+}
+
+footer {
+  width: 100%;
+  height: 7vh;
+  background-color: #47cfac;
 }
 
 /*# sourceMappingURL=main.css.map */

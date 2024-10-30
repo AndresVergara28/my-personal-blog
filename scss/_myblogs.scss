@@ -1,5 +1,5 @@
-.news {
-    height: 62vh;
+.news-section {
+    min-height: 62vh;
     padding: 0rem 10rem 4rem 10rem;
     background-color: gray;
     display: grid;
@@ -11,15 +11,17 @@
         "image description";
 
     .news_title {
-        padding: 2rem 0;
         grid-area: titulo;
+        font-family: 'roboto-slab', monospace;
+
         font-size: 2.4rem;
+        align-self: center;
     }
 
     .news_image {
-        width: 500px;
-        height: 300px;
         grid-area: image;
+        width: 90%;
+        min-height: 300px;
         background: url('../assets/imgs/main-news-img.png');
         background-position: center;
         background-repeat: no-repeat;
@@ -31,9 +33,74 @@
         padding: 2rem 4rem;
 
         .description_title {
+            font-family: 'roboto-slab', monospace;
+
             font-size: 3.2rem;
             padding-bottom: 2rem;
         }
 
+        .description_paragraph {
+            font-family: 'roboto-slab', monospace;
+
+            font-size: 1.4rem;
+            padding-bottom: 2rem;
+
+        }
+
+    }
+}
+
+.blogs-section {
+    padding: 1rem 10rem;
+
+    .blogs_title {
+        text-align: center;
+        padding: 2rem 0;
+        font-size: 1.8rem;
+        font-weight: bolder;
+        font-family: 'roboto-slab', monospace;
+    }
+
+    .blogs_container {
+        padding: 1rem 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
+}
+
+.card {
+    padding: 1rem;
+
+    .card_image {
+        img {
+            width: 100%;
+        }
+    }
+
+    .card_title {
+        padding: 1rem 0;
+        font-size: 1.4rem;
+        font-family: 'roboto-slab', monospace;
+    }
+
+    .card_sinapsis {
+        padding: 1rem 0;
+        font-size: 1.4rem;
+        font-family: 'roboto-slab', monospace;
+        font-weight: 700;
+    }
+
+    .card_button {
+        font-family: 'roboto-slab', monospace;
+        padding: 1rem;
+        font-weight: bold;
+        text-transform: capitalize;
+        border: 1px solid aquamarine;
+
+        &:hover {
+            background-color: aquamarine;
+            color: white;
+        }
     }
 }
