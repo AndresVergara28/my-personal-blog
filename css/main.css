@@ -96,11 +96,23 @@ html {
   padding: 0.5rem 1rem;
   border: 1px solid white;
 }
+.button-principal a {
+  text-transform: capitalize;
+}
 
 body {
   font-family: "Roboto", monospace;
   width: 100%;
   height: 100%;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.border {
+  border: 1px solid red;
 }
 
 header {
@@ -183,21 +195,23 @@ header .header-nav-container .nav-profile-link a {
 }
 
 .news-section {
-  min-height: 62vh;
-  padding: 0rem 10rem 4rem 10rem;
   background-color: gray;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 200px;
-  grid-template-areas: "titulo titulo" "image description" "image description";
 }
-.news-section .news_title {
+.news-section .news_container {
+  display: grid;
+  padding: 1rem 1rem 4rem 1rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50px auto auto;
+  grid-template-areas: "titulo titulo" "image description" "image description";
+  grid-area: description;
+}
+.news-section .news_container .news_title {
   grid-area: titulo;
   font-family: "roboto-slab", monospace;
   font-size: 2.4rem;
   align-self: center;
 }
-.news-section .news_image {
+.news-section .news_container .news_image {
   grid-area: image;
   width: 90%;
   min-height: 300px;
@@ -206,24 +220,23 @@ header .header-nav-container .nav-profile-link a {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.news-section .news_description {
-  grid-area: description;
-  padding: 2rem 4rem;
-}
-.news-section .news_description .description_title {
+.news-section .news_container .news_description .description_title {
   font-family: "roboto-slab", monospace;
   font-size: 3.2rem;
   padding-bottom: 2rem;
 }
-.news-section .news_description .description_paragraph {
+.news-section .news_container .news_description .description_paragraph {
   font-family: "roboto-slab", monospace;
   font-size: 1.4rem;
   padding-bottom: 2rem;
 }
-
-.blogs-section {
-  padding: 1rem 10rem;
+.news-section .news_container .news_description .description_button {
+  border: 1px solid aquamarine;
 }
+.news-section .news_container .news_description .description_button:hover {
+  background-color: aquamarine;
+}
+
 .blogs-section .blogs_title {
   text-align: center;
   padding: 2rem 0;
@@ -265,6 +278,84 @@ header .header-nav-container .nav-profile-link a {
 .card .card_button:hover {
   background-color: aquamarine;
   color: white;
+}
+
+.blogpost {
+  width: 100%;
+}
+.blogpost .blogpost_image {
+  text-align: center;
+  padding: 0rem 3rem;
+}
+.blogpost .blogpost_image img {
+  width: 100%;
+}
+.blogpost .blogpost_main {
+  padding: 5rem 12rem;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  gap: 2rem;
+}
+.blogpost .blogpost_main .blogpost_main--title {
+  margin: 2rem 0;
+  font-family: "roboto-slab", monospace;
+  font-size: 4.8rem;
+}
+.blogpost .blogpost_main .blogpost_main--subtitle {
+  font-family: "roboto-slab", monospace;
+  font-size: 1.96rem;
+}
+.blogpost .blogpost_main .blogpost_main--paragraph {
+  font-family: "roboto-slab", monospace;
+  font-size: 1.4rem;
+  text-align: justify;
+  line-height: 1.8rem;
+}
+.blogpost .blogpost_contact {
+  width: 100%;
+  height: 300px;
+  background-color: rgb(211, 211, 211);
+  display: grid;
+  grid-template-columns: repeat(2, 400px);
+  grid-template-rows: auto;
+  align-items: center;
+  align-content: center;
+  justify-content: space-around;
+}
+.blogpost .blogpost_contact .contact_item {
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto;
+  align-items: center;
+}
+.blogpost .blogpost_contact .contact_item .contact_item--img {
+  width: 100%;
+}
+.blogpost .blogpost_contact .contact_item .contact_item--img img {
+  width: 90%;
+}
+.blogpost .blogpost_contact .contact_item .contact_item--description {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 0.5fr 1fr;
+}
+.blogpost .blogpost_contact .contact_item .contact_item--description .description_title {
+  grid-row: 2/3;
+  font-family: "roboto-slab", monospace;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  /* Adjusts the thickness of the underline */
+  text-underline-offset: 6px;
+}
+.blogpost .blogpost_contact .contact_item .contact_item--description .description_paragraph {
+  grid-row: 3/4;
+  font-family: "roboto-slab", monospace;
+  text-align: justify;
+  font-size: 1.4rem;
 }
 
 footer {

@@ -1,0 +1,92 @@
+.blogpost {
+    width: 100%;
+
+    .blogpost_image {
+        text-align: center;
+        padding: 0rem 3rem;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .blogpost_main {
+        padding: 5rem 12rem;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        gap: 2rem;
+
+        .blogpost_main--title {
+            margin: 2rem 0;
+            font-family: 'roboto-slab', monospace;
+            font-size: $font-size--title*2;
+        }
+
+        .blogpost_main--subtitle {
+            font-family: 'roboto-slab', monospace;
+            font-size: $font-size--subtitle*1.4;
+
+        }
+
+        .blogpost_main--paragraph {
+            font-family: 'roboto-slab', monospace;
+            font-size: $font-size--paragraph;
+            text-align: justify;
+            line-height: 1.8rem;
+
+        }
+    }
+
+    .blogpost_contact {
+        width: 100%;
+        height: 300px;
+        background-color: rgb(211, 211, 211);
+        display: grid;
+        grid-template-columns: repeat(2, 400px);
+        grid-template-rows: auto;
+        align-items: center;
+        align-content: center;
+        justify-content: space-around;
+
+        .contact_item {
+            cursor: pointer;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: auto;
+            align-items: center;
+
+            .contact_item--img {
+                width: 100%;
+
+                img {
+                    width: 90%;
+                }
+            }
+
+            .contact_item--description {
+                width: 100%;
+                height: 100%;
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: 1fr 0.5fr 1fr;
+
+                .description_title {
+                    grid-row: 2/3;
+                    font-family: $font-family--main;
+                    text-decoration: underline;
+                    text-decoration-thickness: 1.5px;
+                    /* Adjusts the thickness of the underline */
+                    text-underline-offset: 6px;
+                }
+
+                .description_paragraph {
+                    grid-row: 3/4;
+                    font-family: $font-family--main;
+                    text-align: justify;
+                    font-size: $font-size--paragraph;
+                }
+            }
+        }
+    }
+}
