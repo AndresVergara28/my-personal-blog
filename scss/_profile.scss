@@ -1,0 +1,82 @@
+.section_profile {
+    width: 100%;
+    height: 45vh;
+    background-color: rgb(211, 211, 211);
+    display: grid;
+    grid-template-columns: 300px 600px;
+    grid-template-rows: 180px;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+
+    .profile_picture {
+        width: 100%;
+
+        .profile_picture--img {
+            width: 100%;
+        }
+
+    }
+
+    .profile_description {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+
+        .profile_description--title {
+            font-family: $font-family--main;
+            font-size: $font-size--title;
+            font-weight: bolder;
+        }
+
+        .profile_description--paragraph {
+            font-family: $font-family--main;
+            font-size: $font-size--paragraph;
+            font-weight: 400;
+            text-align: justify;
+        }
+    }
+}
+
+.section_projects {
+    width: 100%;
+
+    .container_projects {
+        .projects_title {
+            width: 80%;
+            margin: 0 auto;
+            padding: 3rem 0;
+            text-align: center;
+            font-family: $font-family--main;
+            font-size: $font-size--title*0.8;
+            border-bottom: 1px solid rgb(211, 211, 211);
+        }
+
+        .projects_articles {
+            width: 80%;
+            margin: 0 auto;
+            padding: 4rem 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+            gap: 5rem;
+
+            .article_project {
+                .article_project--title {
+                    font-family: $font-family--main;
+                    font-size: $font-size--subtitle;
+                }
+
+                .article_project--description {
+                    margin-top: 2rem;
+                    font-family: $font-family--main;
+                    font-size: $font-size--paragraph*0.9;
+                }
+            }
+        }
+    }
+}

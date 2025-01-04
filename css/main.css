@@ -312,7 +312,8 @@ header .header-nav-container .nav-profile-link a {
   text-align: justify;
   line-height: 1.8rem;
 }
-.blogpost .blogpost_contact {
+
+.contact {
   width: 100%;
   height: 300px;
   background-color: rgb(211, 211, 211);
@@ -323,27 +324,27 @@ header .header-nav-container .nav-profile-link a {
   align-content: center;
   justify-content: space-around;
 }
-.blogpost .blogpost_contact .contact_item {
+.contact .contact_item {
   cursor: pointer;
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: auto;
   align-items: center;
 }
-.blogpost .blogpost_contact .contact_item .contact_item--img {
+.contact .contact_item .contact_item--img {
   width: 100%;
 }
-.blogpost .blogpost_contact .contact_item .contact_item--img img {
+.contact .contact_item .contact_item--img img {
   width: 90%;
 }
-.blogpost .blogpost_contact .contact_item .contact_item--description {
+.contact .contact_item .contact_item--description {
   width: 100%;
   height: 100%;
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 1fr 0.5fr 1fr;
 }
-.blogpost .blogpost_contact .contact_item .contact_item--description .description_title {
+.contact .contact_item .contact_item--description .description_title {
   grid-row: 2/3;
   font-family: "roboto-slab", monospace;
   text-decoration: underline;
@@ -351,11 +352,80 @@ header .header-nav-container .nav-profile-link a {
   /* Adjusts the thickness of the underline */
   text-underline-offset: 6px;
 }
-.blogpost .blogpost_contact .contact_item .contact_item--description .description_paragraph {
+.contact .contact_item .contact_item--description .description_paragraph {
   grid-row: 3/4;
   font-family: "roboto-slab", monospace;
   text-align: justify;
   font-size: 1.4rem;
+}
+
+.section_profile {
+  width: 100%;
+  height: 45vh;
+  background-color: rgb(211, 211, 211);
+  display: grid;
+  grid-template-columns: 300px 600px;
+  grid-template-rows: 180px;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+.section_profile .profile_picture {
+  width: 100%;
+}
+.section_profile .profile_picture .profile_picture--img {
+  width: 100%;
+}
+.section_profile .profile_description {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+}
+.section_profile .profile_description .profile_description--title {
+  font-family: "roboto-slab", monospace;
+  font-size: 2.4rem;
+  font-weight: bolder;
+}
+.section_profile .profile_description .profile_description--paragraph {
+  font-family: "roboto-slab", monospace;
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-align: justify;
+}
+
+.section_projects {
+  width: 100%;
+}
+.section_projects .container_projects .projects_title {
+  width: 80%;
+  margin: 0 auto;
+  padding: 3rem 0;
+  text-align: center;
+  font-family: "roboto-slab", monospace;
+  font-size: 1.92rem;
+  border-bottom: 1px solid rgb(211, 211, 211);
+}
+.section_projects .container_projects .projects_articles {
+  width: 80%;
+  margin: 0 auto;
+  padding: 4rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 5rem;
+}
+.section_projects .container_projects .projects_articles .article_project .article_project--title {
+  font-family: "roboto-slab", monospace;
+  font-size: 1.4rem;
+}
+.section_projects .container_projects .projects_articles .article_project .article_project--description {
+  margin-top: 2rem;
+  font-family: "roboto-slab", monospace;
+  font-size: 1.26rem;
 }
 
 footer {
