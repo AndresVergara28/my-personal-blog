@@ -313,58 +313,13 @@ header .header-nav-container .nav-profile-link a {
   line-height: 1.8rem;
 }
 
-.contact {
-  width: 100%;
-  height: 300px;
-  background-color: rgb(211, 211, 211);
-  display: grid;
-  grid-template-columns: repeat(2, 400px);
-  grid-template-rows: auto;
-  align-items: center;
-  align-content: center;
-  justify-content: space-around;
-}
-.contact .contact_item {
-  cursor: pointer;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: auto;
-  align-items: center;
-}
-.contact .contact_item .contact_item--img {
-  width: 100%;
-}
-.contact .contact_item .contact_item--img img {
-  width: 90%;
-}
-.contact .contact_item .contact_item--description {
-  width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 1fr 0.5fr 1fr;
-}
-.contact .contact_item .contact_item--description .description_title {
-  grid-row: 2/3;
-  font-family: "roboto-slab", monospace;
-  text-decoration: underline;
-  text-decoration-thickness: 1.5px;
-  /* Adjusts the thickness of the underline */
-  text-underline-offset: 6px;
-}
-.contact .contact_item .contact_item--description .description_paragraph {
-  grid-row: 3/4;
-  font-family: "roboto-slab", monospace;
-  text-align: justify;
-  font-size: 1.4rem;
-}
-
 .section_profile {
   width: 100%;
   height: 45vh;
   background-color: rgb(211, 211, 211);
   display: grid;
-  grid-template-columns: 300px 600px;
+  grid-template-columns: 1fr 2fr;
+  padding: 6rem 16rem;
   grid-template-rows: 180px;
   gap: 2rem;
   align-items: center;
@@ -376,6 +331,7 @@ header .header-nav-container .nav-profile-link a {
 }
 .section_profile .profile_picture .profile_picture--img {
   width: 100%;
+  object-fit: cover;
 }
 .section_profile .profile_description {
   width: 100%;
@@ -428,6 +384,93 @@ header .header-nav-container .nav-profile-link a {
   font-size: 1.26rem;
 }
 
+@media screen and (max-width: 1024px) {
+  .section_profile {
+    height: auto;
+    padding: 2rem 6rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .section_profile {
+    padding: 4rem 3rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 1rem;
+  }
+}
+.contact {
+  width: 100%;
+  height: 300px;
+  background-color: rgb(211, 211, 211);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 12rem;
+  gap: 10rem;
+  grid-template-rows: auto;
+  align-items: center;
+  align-content: center;
+  justify-content: space-around;
+}
+.contact .contact_item {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto;
+  align-items: center;
+}
+.contact .contact_item .contact_item--img {
+  height: 100%;
+  width: 100%;
+}
+.contact .contact_item .contact_item--img img {
+  width: 90%;
+  height: 100%;
+}
+.contact .contact_item .contact_item--description {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 0.5fr 1fr;
+}
+.contact .contact_item .contact_item--description .description_title {
+  grid-row: 2/3;
+  font-family: "roboto-slab", monospace;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  /* Adjusts the thickness of the underline */
+  text-underline-offset: 6px;
+}
+.contact .contact_item .contact_item--description .description_paragraph {
+  grid-row: 3/4;
+  font-family: "roboto-slab", monospace;
+  text-align: justify;
+  font-size: 1.4rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .contact {
+    height: auto;
+    padding: 8rem 4rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contact {
+    padding: 6rem 8rem;
+    gap: 4rem;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 425px) {
+  .contact {
+    padding: 3rem 2rem;
+    gap: 4rem;
+  }
+}
 footer {
   width: 100%;
   height: 7vh;

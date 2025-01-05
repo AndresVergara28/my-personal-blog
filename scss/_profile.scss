@@ -3,7 +3,8 @@
     height: 45vh;
     background-color: rgb(211, 211, 211);
     display: grid;
-    grid-template-columns: 300px 600px;
+    grid-template-columns: 1fr 2fr;
+    padding: 6rem 16rem;
     grid-template-rows: 180px;
     gap: 2rem;
     align-items: center;
@@ -15,6 +16,7 @@
 
         .profile_picture--img {
             width: 100%;
+            object-fit: cover;
         }
 
     }
@@ -78,5 +80,28 @@
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width:1024px) {
+
+    .section_profile {
+        height: auto;
+
+        padding: 2rem 6rem;
+
+    }
+}
+
+@media screen and (max-width:768px) {
+
+    .section_profile {
+        padding: 4rem 3rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 1rem;
+
+
     }
 }
