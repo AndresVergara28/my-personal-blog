@@ -1,0 +1,35 @@
+.card {
+    padding: 1rem;
+
+    .card_image {
+        img {
+            width: 100%;
+        }
+    }
+
+    .card_title {
+        padding: 1rem 0;
+        font-size: 1.4rem;
+        font-family: 'roboto-slab', monospace;
+    }
+
+    .card_sinapsis {
+        padding: 1rem 0;
+        font-size: 1.4rem;
+        font-family: 'roboto-slab', monospace;
+        font-weight: 700;
+    }
+
+    .card_button {
+        font-family: 'roboto-slab', monospace;
+        padding: 1rem;
+        font-weight: bold;
+        text-transform: capitalize;
+        border: 1px solid aquamarine;
+
+        &:hover {
+            background-color: aquamarine;
+            color: white;
+        }
+    }
+}

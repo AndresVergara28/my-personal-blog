@@ -109,6 +109,11 @@ body {
 .container {
   max-width: 1024px;
   margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.bg-gray {
+  background-color: rgb(211, 211, 211);
 }
 
 .border {
@@ -194,63 +199,6 @@ header .header-nav-container .nav-profile-link a {
   background-color: aquamarine;
 }
 
-.news-section {
-  background-color: gray;
-}
-.news-section .news_container {
-  display: grid;
-  padding: 1rem 1rem 4rem 1rem;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 50px auto auto;
-  grid-template-areas: "titulo titulo" "image description" "image description";
-  grid-area: description;
-}
-.news-section .news_container .news_title {
-  grid-area: titulo;
-  font-family: "roboto-slab", monospace;
-  font-size: 2.4rem;
-  align-self: center;
-}
-.news-section .news_container .news_image {
-  grid-area: image;
-  width: 90%;
-  min-height: 300px;
-  background: url("../assets/imgs/main-news-img.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.news-section .news_container .news_description .description_title {
-  font-family: "roboto-slab", monospace;
-  font-size: 3.2rem;
-  padding-bottom: 2rem;
-}
-.news-section .news_container .news_description .description_paragraph {
-  font-family: "roboto-slab", monospace;
-  font-size: 1.4rem;
-  padding-bottom: 2rem;
-}
-.news-section .news_container .news_description .description_button {
-  border: 1px solid aquamarine;
-}
-.news-section .news_container .news_description .description_button:hover {
-  background-color: aquamarine;
-}
-
-.blogs-section .blogs_title {
-  text-align: center;
-  padding: 2rem 0;
-  font-size: 1.8rem;
-  font-weight: bolder;
-  font-family: "roboto-slab", monospace;
-}
-.blogs-section .blogs_container {
-  padding: 1rem 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
-}
-
 .card {
   padding: 1rem;
 }
@@ -280,18 +228,94 @@ header .header-nav-container .nav-profile-link a {
   color: white;
 }
 
+.news_container {
+  display: grid;
+  padding: 1rem 1rem 4rem 1rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50px auto auto;
+  grid-template-areas: "titulo titulo" "image description" "image description";
+}
+.news_container .news_title {
+  grid-area: titulo;
+  font-family: "roboto-slab", monospace;
+  font-size: 2.4rem;
+  align-self: center;
+}
+.news_container .news_image {
+  grid-area: image;
+  width: 100%;
+  min-height: 300px;
+  background: url("../assets/imgs/main-news-img.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.news_container .news_description {
+  grid-area: description;
+  padding-left: 1rem;
+}
+.news_container .news_description .description_title {
+  font-family: "roboto-slab", monospace;
+  font-size: 3.2rem;
+  padding-bottom: 2rem;
+}
+.news_container .news_description .description_paragraph {
+  font-family: "roboto-slab", monospace;
+  font-size: 1.4rem;
+  padding-bottom: 2rem;
+}
+.news_container .news_description .description_button {
+  border: 1px solid aquamarine;
+}
+.news_container .news_description .description_button:hover {
+  background-color: aquamarine;
+}
+
+.blogs-section .blogs_title {
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 1.8rem;
+  font-weight: bolder;
+  font-family: "roboto-slab", monospace;
+}
+.blogs-section .blogs_container {
+  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .blogs-section .blogs_container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 425px) {
+  .news_container {
+    grid-template-areas: "titulo titulo" "image image" "description description";
+  }
+  .news_container .news_description {
+    padding: 0;
+  }
+  .news_container .news_description .description_title {
+    padding: 2rem 0;
+  }
+  .blogs-section .blogs_container {
+    grid-template-columns: 1fr;
+  }
+}
 .blogpost {
   width: 100%;
 }
 .blogpost .blogpost_image {
   text-align: center;
-  padding: 0rem 3rem;
 }
 .blogpost .blogpost_image img {
   width: 100%;
 }
 .blogpost .blogpost_main {
-  padding: 5rem 12rem;
+  padding: 5rem 2rem;
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: auto;
@@ -315,23 +339,25 @@ header .header-nav-container .nav-profile-link a {
 
 .section_profile {
   width: 100%;
-  height: 45vh;
-  background-color: rgb(211, 211, 211);
   display: grid;
   grid-template-columns: 1fr 2fr;
-  padding: 6rem 16rem;
-  grid-template-rows: 180px;
+  grid-template-rows: 30vh;
   gap: 2rem;
+  padding: 4rem 2rem;
   align-items: center;
   justify-content: center;
   align-content: center;
 }
 .section_profile .profile_picture {
   width: 100%;
-}
-.section_profile .profile_picture .profile_picture--img {
-  width: 100%;
-  object-fit: cover;
+  height: 100%;
+  background-image: url("../assets/imgs/profile-pic.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /*   .profile_picture--img {
+      width: 100%;
+  } */
 }
 .section_profile .profile_description {
   width: 100%;
@@ -353,11 +379,7 @@ header .header-nav-container .nav-profile-link a {
   text-align: justify;
 }
 
-.section_projects {
-  width: 100%;
-}
 .section_projects .container_projects .projects_title {
-  width: 80%;
   margin: 0 auto;
   padding: 3rem 0;
   text-align: center;
@@ -366,8 +388,6 @@ header .header-nav-container .nav-profile-link a {
   border-bottom: 1px solid rgb(211, 211, 211);
 }
 .section_projects .container_projects .projects_articles {
-  width: 80%;
-  margin: 0 auto;
   padding: 4rem 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -381,13 +401,17 @@ header .header-nav-container .nav-profile-link a {
 .section_projects .container_projects .projects_articles .article_project .article_project--description {
   margin-top: 2rem;
   font-family: "roboto-slab", monospace;
-  font-size: 1.26rem;
+  font-size: 1.4rem;
+  text-align: justify;
 }
 
 @media screen and (max-width: 1024px) {
   .section_profile {
     height: auto;
-    padding: 2rem 6rem;
+    padding: 4rem 2rem;
+  }
+  .section_projects .container_projects {
+    padding: 0 2rem;
   }
 }
 @media screen and (max-width: 768px) {
@@ -395,8 +419,11 @@ header .header-nav-container .nav-profile-link a {
     padding: 4rem 3rem;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto;
+    grid-template-rows: 3fr 1fr;
     gap: 1rem;
+  }
+  .section_projects .container_projects .projects_articles {
+    grid-template-columns: 1fr;
   }
 }
 .contact {
@@ -405,7 +432,6 @@ header .header-nav-container .nav-profile-link a {
   background-color: rgb(211, 211, 211);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding: 0 12rem;
   gap: 10rem;
   grid-template-rows: auto;
   align-items: center;
@@ -427,7 +453,6 @@ header .header-nav-container .nav-profile-link a {
 }
 .contact .contact_item .contact_item--img img {
   width: 90%;
-  height: 100%;
 }
 .contact .contact_item .contact_item--description {
   width: 100%;
@@ -454,15 +479,30 @@ header .header-nav-container .nav-profile-link a {
 @media screen and (max-width: 1024px) {
   .contact {
     height: auto;
-    padding: 8rem 4rem;
+    padding: 6rem 2rem;
   }
 }
 @media screen and (max-width: 768px) {
   .contact {
-    padding: 6rem 8rem;
+    padding: 6rem 2rem;
     gap: 4rem;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(340px, 400px);
+    grid-template-rows: 1fr 1fr;
+  }
+  .contact .contact_item .contact_item--img {
+    width: 100%;
+  }
+  .contact .contact_item .contact_item--description {
+    grid-template-rows: 0.3fr 0.7fr;
+  }
+  .contact .contact_item .contact_item--description .description_title {
+    grid-row: 1/2;
+    align-self: self-end;
+  }
+  .contact .contact_item .contact_item--description .description_paragraph {
+    grid-row: 2/3;
+    align-self: center;
   }
 }
 @media screen and (max-width: 425px) {

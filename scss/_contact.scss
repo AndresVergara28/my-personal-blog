@@ -4,7 +4,6 @@
     background-color: rgb(211, 211, 211);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 0 12rem;
     gap: 10rem;
     grid-template-rows: auto;
     align-items: center;
@@ -26,7 +25,6 @@
 
             img {
                 width: 90%;
-                height: 100%;
             }
         }
 
@@ -59,17 +57,37 @@
 @media screen and (max-width:1024px) {
     .contact {
         height: auto;
-        padding: 8rem 4rem;
+        padding: 6rem 2rem;
     }
 }
 
 @media screen and (max-width:768px) {
     .contact {
-        padding: 6rem 8rem;
+        padding: 6rem 2rem;
         gap: 4rem;
-
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(340px, 400px);
+        grid-template-rows: 1fr 1fr;
+
+        .contact_item {
+            .contact_item--img {
+                width: 100%;
+            }
+
+            .contact_item--description {
+                grid-template-rows: 0.3fr 0.7fr;
+
+                .description_title {
+                    grid-row: 1/2;
+                    align-self: self-end;
+                }
+
+                .description_paragraph {
+                    grid-row: 2/3;
+                    align-self: center;
+                }
+            }
+        }
     }
 }
 

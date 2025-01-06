@@ -1,63 +1,60 @@
-.news-section {
-    background-color: gray;
-
-    .news_container {
-        display: grid;
-        padding: 1rem 1rem 4rem 1rem;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 50px auto auto;
-        grid-template-areas:
-            "titulo titulo"
-            "image description"
-            "image description";
-
-        grid-area: description;
-
-        .news_title {
-            grid-area: titulo;
-            font-family: 'roboto-slab', monospace;
-            font-size: 2.4rem;
-            align-self: center;
-        }
-
-        .news_image {
-            grid-area: image;
-            width: 90%;
-            min-height: 300px;
-            background: url('../assets/imgs/main-news-img.png');
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
-        .news_description {
-
-            .description_title {
-                font-family: 'roboto-slab', monospace;
-
-                font-size: 3.2rem;
-                padding-bottom: 2rem;
-            }
-
-            .description_paragraph {
-                font-family: 'roboto-slab', monospace;
-                font-size: 1.4rem;
-                padding-bottom: 2rem;
-
-            }
-
-            .description_button {
-                border: 1px solid aquamarine;
-
-                &:hover {
-                    background-color: aquamarine;
-                }
-            }
-        }
+.news_container {
+    display: grid;
+    padding: 1rem 1rem 4rem 1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px auto auto;
+    grid-template-areas:
+        "titulo titulo"
+        "image description"
+        "image description";
 
 
+    .news_title {
+        grid-area: titulo;
+        font-family: 'roboto-slab', monospace;
+        font-size: 2.4rem;
+        align-self: center;
     }
+
+    .news_image {
+        grid-area: image;
+        width: 100%;
+        min-height: 300px;
+        background: url('../assets/imgs/main-news-img.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .news_description {
+        grid-area: description;
+        padding-left: 1rem;
+
+        .description_title {
+            font-family: 'roboto-slab', monospace;
+            font-size: 3.2rem;
+            padding-bottom: 2rem;
+        }
+
+        .description_paragraph {
+            font-family: 'roboto-slab', monospace;
+            font-size: 1.4rem;
+            padding-bottom: 2rem;
+
+        }
+
+        .description_button {
+            border: 1px solid aquamarine;
+
+            &:hover {
+                background-color: aquamarine;
+            }
+        }
+    }
+
+
 }
+
 
 .blogs-section {
     .blogs_title {
@@ -73,41 +70,46 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto;
+        gap: 1rem;
     }
 }
 
-.card {
-    padding: 1rem;
+@media screen and (max-width:1024px) {}
 
-    .card_image {
-        img {
-            width: 100%;
+@media screen and (max-width:768px) {
+    .blogs-section {
+        .blogs_container {
+
+            grid-template-columns: 1fr 1fr;
+
+        }
+    }
+}
+
+@media screen and (max-width:425px) {
+    .news_container {
+        grid-template-areas:
+            "titulo titulo"
+            "image image"
+            "description description";
+
+        .news_description {
+            padding: 0;
+
+            .description_title {
+                padding: 2rem 0;
+            }
+        }
+
+
+    }
+
+    .blogs-section {
+        .blogs_container {
+
+            grid-template-columns: 1fr;
+
         }
     }
 
-    .card_title {
-        padding: 1rem 0;
-        font-size: 1.4rem;
-        font-family: 'roboto-slab', monospace;
-    }
-
-    .card_sinapsis {
-        padding: 1rem 0;
-        font-size: 1.4rem;
-        font-family: 'roboto-slab', monospace;
-        font-weight: 700;
-    }
-
-    .card_button {
-        font-family: 'roboto-slab', monospace;
-        padding: 1rem;
-        font-weight: bold;
-        text-transform: capitalize;
-        border: 1px solid aquamarine;
-
-        &:hover {
-            background-color: aquamarine;
-            color: white;
-        }
-    }
 }
